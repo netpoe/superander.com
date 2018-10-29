@@ -10,12 +10,56 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
+    "types": [
+      "node"
+    ],
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@abi/*": [
+        "assets/contracts/*"
+      ],
+      "@service/*": [
+        "app/@service/*"
+      ],
+      "@pipe/*": [
+        "app/@pipe/*"
+      ],
+      "@factory/*": [
+        "app/@factory/*"
+      ],
+      "@deployer/*": [
+        "app/@deployer/*"
+      ],
+      "@contract/*": [
+        "app/@contract/*"
+      ],
+      "@error/*": [
+        "app/@error/*"
+      ],
+      "@shared/*": [
+        "app/shared/*"
+      ],
+      "@guard/*": [
+        "app/@guard/*"
+      ],
+      "@model/*": [
+        "app/@model/*"
+      ],
+      "@environment/*": [
+        "environments/*"
+      ],
+      "scui-lib": [
+        "../dist/scui-lib"
+      ],
+      "scui-lib/*": [
+        "../dist/scui-lib/*"
+      ]
+    }
   }
 }

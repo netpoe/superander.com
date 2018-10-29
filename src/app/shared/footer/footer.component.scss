@@ -1,0 +1,31 @@
+@import "sass/styles";
+
+.footer {
+  background-color: darken($black, 3%);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  .footer-left,
+  .footer-right {
+    @include flex-column-center;
+    min-height: 70px;
+  }
+
+  .footer-left {
+
+  }
+
+  .footer-right {
+  }
+
+  .logo {
+    text-align: right;
+    img {
+      height: auto;
+      width: 70px;
+    }
+  }
+}

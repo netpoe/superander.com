@@ -1,20 +1,65 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<main role="main" class="site-wrapper">
+  <section id="intro" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="video-wrapper"></div>
+          <div class="info-block">
+            <p>Invest in <a href="https://open.spotify.com/artist/4M0tyK4jalTpqDIK3MXeK1?si=ZPaYyrj0TW6nqPP8QZ4aAQ"
+                target="_blank">Súper Ánder</a> by sending ETH to <a href="#" target="_blank">this crowdsale contract</a>.</p>
+            <p>Total cap: 249.4 ETH. Amount raised: 5 ETH</p>
+          </div>
+          <small class="created-with">ICO powered by <a href="#" target="_blank">simpleico.com</a></small>
+        </div>
+        <div class="col-sm-3">
+          <div class="qr-wrapper">
+            <img src="assets/img/supercrowdsale-qr.png" alt="0xb10b0e88f1f6871ffe778078b914161b9e9ebedd">
+            <div class="data">
+              <span class="token-name">SANDER1</span>
+              <a href="#" target="_blank" class="etherscan-link text-truncate">0xb10b0e88f1f6871ffe778078b914161b9e9ebedd</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="details" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7">
+          <div class="token-img-wrapper">
+            <img src="assets/svg/superander-token-light.svg" alt="superander token SANDER1" class="superander-token">
+          </div>
+          <header class="section-header">
+            <h3>Each</h3>
+            <h2 class="sander-1 display-2 alt-bold">SANDER1</h2>
+            <h3 class="display-4">equals 1 song</h3>
+          </header>
+        </div>
+        <div class="col-sm-5">
+          <div class="details">
+            <h3 class="bold">Invest in the 1st full-length album of Súper Ánder.</h3>
+            <br>
+            <h4>Each song is worth $5,000.00 USD/ETH</h4>
+            <h4>The album will have 10 songs, $50,000.00 USD/ETH</h4>
+            <h4>By owning a share of <span class="alt-bold">SANDER1</span> tokens you'll participate in 49% of the
+              album
+              total profits. Forever.</h4>
+          </div>
+          <div class="spotify-widget-wrapper">
+            <iframe src="https://open.spotify.com/embed/artist/4M0tyK4jalTpqDIK3MXeK1" width="100%" height="160"
+              frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="backyard">
+    <video width="100%" height="auto" controls>
+      <source src="assets/video/intro_paisaje_music.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+</main>
 
+<app-footer></app-footer>

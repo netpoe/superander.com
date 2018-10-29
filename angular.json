@@ -23,8 +23,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/sass/global.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets",
+                "node_modules"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

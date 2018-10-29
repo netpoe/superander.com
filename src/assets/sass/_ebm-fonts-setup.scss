@@ -1,0 +1,29 @@
+/* PROJECT ESPECIFIC FONTS */
+
+// SANS-SERIFS
+// @mixin thin { font-family: $font-family-base; font-weight: 100; }
+// @mixin extra-light { font-family: $font-family-base; font-weight: 200; }
+// @mixin light { font-family: $font-family-base; font-weight: 300; }
+// @mixin light-italic { font-family: $font-family-base; font-weight: 300; font-style: italic;}
+@mixin book { font-family: $font-family-base; font-weight: 400; }
+// @mixin book-italic { font-family: $font-family-base; font-weight: 400; font-style: italic;}
+// @mixin medium { font-family: $font-family-base; font-weight: 500; }
+// @mixin medium-italic { font-family: $font-family-base; font-weight: 500; font-style: italic;}
+@mixin bold { font-family: $font-family-base; font-weight: 700; }
+// @mixin bold-italic { font-family: $font-family-base; font-weight: 700; font-style: italic;}
+
+// SERIFS
+// @mixin serif-light { font-family: $font-family-serif; font-weight: 300; }
+// @mixin serif-light-italic { font-family: $font-family-serif; font-weight: 300; font-style: italic;}
+// @mixin serif-book { font-family: $font-family-serif; font-weight: 400; }
+// @mixin serif-book-italic { font-family: $font-family-serif; font-weight: 400; font-style: italic;}
+// @mixin serif-medium { font-family: $font-family-serif; font-weight: 500; }
+// @mixin serif-medium-italic { font-family: $font-family-serif; font-weight: 500; font-style: italic;}
+// @mixin serif-bold { font-family: $font-family-serif; font-weight: 900; }
+// @mixin serif-bold-italic { font-family: $font-family-serif; font-weight: 700; font-style: italic;}
+
+// ALTERNATIVE FONTS
+// @mixin alt-light { font-family: $font-family-alt; font-weight: 400; }
+// @mixin alt-book { font-family: $font-family-alt; font-weight: 500; }
+// @mixin alt-medium { font-family: $font-family-alt; font-weight: 600; }
+@mixin alt-bold { font-family: $font-family-alt; font-weight: 700; letter-spacing: 1.5px;}

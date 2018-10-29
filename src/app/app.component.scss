@@ -1,0 +1,95 @@
+@import "sass/styles";
+
+#intro {
+  @include main;
+  @include flex-column-center;
+  // @include media-breakpoint-down(sm) {
+  //   padding-top: 98px;
+  // }
+
+  .video-wrapper {
+    margin-bottom: get-spacer(3);
+    background-color: black;
+    min-height: 50vh;
+  }
+
+  .qr-wrapper,
+  .info-block {
+    background-color: darken($black, 3%);
+    border-radius: $border-radius;
+    padding: get-spacer(2);
+  }
+
+  .qr-wrapper {
+    margin-bottom: get-spacer(3);
+    border: 3px solid white;
+    padding-bottom: 0;
+    min-height: 40vh;
+    img {
+      height: auto;
+      width: 100%;
+    }
+    .data {
+      @include flex-column-center;
+      @include flex-align-end;
+      text-align: right;
+      min-height: 70px;
+      color: white;
+      .token-name {
+        @include alt-bold;
+        display: block;
+      }
+      .etherscan-link {
+        max-width: 180px;
+        display: block;
+      }
+    }
+  }
+
+  .info-block {
+    background-color: darken($black, 3%);
+    color: white;
+    p {
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .created-with {
+    color: white;
+  }
+}
+
+#details {
+  @include flex-column-center;
+  background-color: white;
+  min-height: 100vh;
+  .section-header {
+    text-transform: uppercase;
+    .sander-1 {
+    }
+    h3 {
+      @include bold;
+    }
+  }
+
+  .content-left,
+  .content-right {
+  }
+
+  .token-img-wrapper {
+    @include flex-column-center;
+    margin-bottom: get-spacer(5);
+    img {
+      width: 30%;
+    }
+  }
+
+  .spotify-widget-wrapper {
+  }
+
+  .details {
+    margin-bottom: get-spacer(4);
+  }
+}
