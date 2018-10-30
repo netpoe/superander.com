@@ -14,11 +14,12 @@ a.btn,
 button.btn,
 input[type="submit"].btn,
 .btn {
-  @include book;
+  @include bold;
   border-radius: $border-radius-sm;
   text-transform: uppercase;
   font-size: $font-size-sm;
   letter-spacing: 0.8px;
+  text-decoration: none;
   i {
     font-size: $font-size-sm;
     font-weight: bold;

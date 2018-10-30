@@ -29,8 +29,11 @@ html, body {
 }
 
 .section {
-  padding-bottom: 98px;
-  padding-top: 98px;
+  padding-bottom: 70px;
+  padding-top: 70px;
   .section-header {
+  }
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 98px;
   }
 }

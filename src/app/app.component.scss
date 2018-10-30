@@ -1,23 +1,29 @@
 @import "sass/styles";
 
 #intro {
-  @include main;
   @include flex-column-center;
-  // @include media-breakpoint-down(sm) {
-  //   padding-top: 98px;
-  // }
+  @include main;
+
+  .title {
+    margin-bottom: get-spacer(5);
+    color: white;
+  }
 
   .video-wrapper {
     margin-bottom: get-spacer(3);
     background-color: black;
-    min-height: 50vh;
   }
 
+  .video-wrapper,
   .qr-wrapper,
   .info-block {
     background-color: darken($black, 3%);
     border-radius: $border-radius;
     padding: get-spacer(2);
+  }
+
+  .video-wrapper {
+    padding-bottom: 0;
   }
 
   .qr-wrapper {
@@ -47,12 +53,27 @@
   }
 
   .info-block {
-    background-color: darken($black, 3%);
-    color: white;
-    p {
+    background-color: $yellow;
+    padding: get-spacer(3);
+    p, h4 {
+      margin-bottom: get-spacer(3);
       &:last-child {
         margin: 0;
       }
+    }
+    h4, label {
+      @include bold;
+    }
+    &.outline {
+      background-color: transparent;
+      border: 2px solid $yellow;
+      color: white;
+    }
+    label {
+      text-transform: uppercase;
+      line-height: 12px;
+      display: block;
+      margin: 0;
     }
   }
 
@@ -87,9 +108,9 @@
   }
 
   .spotify-widget-wrapper {
+    margin: get-spacer(4) 0;
   }
 
   .details {
-    margin-bottom: get-spacer(4);
   }
 }
