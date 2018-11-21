@@ -48,7 +48,7 @@ export class ContainerComponent implements OnInit, AfterViewInit {
         document.querySelector(`#${fragment}`).scrollIntoView({ behavior: 'smooth' })
       }
     })
-    this.init()
+    // this.init()
   }
 
   ngAfterViewInit() {

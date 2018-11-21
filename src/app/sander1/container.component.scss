@@ -157,4 +157,53 @@
 #roadmap {
   background-color: white;
   min-height: 100vh;
+  article {
+    position: relative;
+    width: 50%;
+    h4 {
+      @include bold;
+    }
+    p {
+      margin: 0;
+    }
+    .description {
+      min-height: 112px;
+    }
+  }
+  .date {
+    border-radius: $border-radius;
+    border: 2px solid $green;
+    padding: get-spacer(2);
+    position: absolute;
+    min-width: 140px;
+    color: $green;
+    top: 0;
+    .year {
+      font-size: $h4-font-size;
+      display: block;
+    }
+  }
+  .container {
+    margin-bottom: get-spacer(4);
+    &:nth-child(odd) {
+      article {
+        padding-right: 160px;
+        text-align: right;
+      }
+      .date {
+        text-align: left;
+        right: 0;
+      }
+    }
+    &:nth-child(even) {
+      @include flex-row-end;
+      article {
+        padding-left: 20px;
+      }
+      .date {
+        text-align: right;
+        left: -140px;
+      }
+    }
+  }
 }
