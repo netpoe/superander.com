@@ -23,8 +23,7 @@
         <div class="col-sm-3">
           <app-crowdsale-qr-code></app-crowdsale-qr-code>
           <div class="info-block">
-            <p class="bold">Scan this QR with your wallet and send the amount of ETH you are willing to invest.<br><a
-                [routerLink]="['/SANDER1']" fragment="details">See
+            <p class="bold">Scan this QR with your wallet and send the amount of ETH you are willing to invest.<br><a [routerLink]="['/SANDER1']" fragment="details">See
                 token
                 info</a></p>
             <p><label>Wallet:</label><a target="_blank" href="#">{{ ens.wallet.name }}</a></p>
@@ -62,8 +61,7 @@
               total earnings. Quarterly.</h4>
           </div>
           <div class="spotify-widget-wrapper">
-            <iframe src="https://open.spotify.com/embed/artist/4M0tyK4jalTpqDIK3MXeK1" width="100%" height="160"
-              frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe src="https://open.spotify.com/embed/artist/4M0tyK4jalTpqDIK3MXeK1" width="100%" height="160" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           </div>
           <a class="btn btn-yellow btn-lg" [routerLink]="['/SANDER1']" fragment="token-distro">See token distribution</a>
         </div>
@@ -71,13 +69,25 @@
     </div>
   </section>
   <section id="warning" class="section">
-    <div class="container-md">
-      <h2 class="display-1 bold">WARNING!</h2>
-      <h3 class="bold">Before sending ETH to this project, please verify that the addresses match:</h3>
-      <div class="ens-addresses">
-        <h4><label>Wallet: </label><a target="_blank" href="#">{{ ens.wallet.name }}</a></h4>
-        <h4><label>Token: </label><a target="_blank" href="#">{{ ens.sander1.name }}</a></h4>
-        <h4><label>SuperCrowdsale: </label><a target="_blank" href="#">{{ ens.crowdsale.name }}</a></h4>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm-6">
+          <h2 class="display-1 bold">WARNING!</h2>
+          <h3 class="bold">Before sending ETH to this crowdsale, please verify that the addresses match:</h3>
+          <div class="ens-addresses">
+            <h4><label>Wallet: </label><a target="_blank" href="#">{{ ens.wallet.name }}</a></h4>
+            <h4><label>Token: </label><a target="_blank" href="#">{{ ens.sander1.name }}</a></h4>
+            <h4><label>Crowdsale: </label><a target="_blank" href="#">{{ ens.crowdsale.name }}</a></h4>
+          </div>
+        </div>
+        <div class="col-sm-6 qr-wrapper">
+          <div class="qr">
+            <p>Scan this QR Code with your Ethereum wallet and send ETH to it to receive SANDER1
+              tokens.</p>
+            <app-crowdsale-qr-code></app-crowdsale-qr-code>
+            <a [routerLink]="['/SANDER1']" fragment="contract-info" class="btn btn-light">See contract info</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -90,22 +100,28 @@
   <section id="token-distro" class="section">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6">
-          <header class="section-header">
-            <h2>Token Distribution</h2>
-            <h4>The album will contain {{ config.song.amount }} songs</h4>
-            <h4>Each ERC20 token is worth 1 song</h4>
-            <h4>Each song costs {{ config.song.price.ETH | number:'1.0-3' }} ETH distributed like this:</h4>
-          </header>
-          <div id="donut"></div>
-        </div>
-        <div class="col-sm-6 qr-wrapper">
-          <div class="qr">
-            <p class="text-white">Scan this QR Code with your Ethereum wallet and send ETH to it to receive SANDER1
-              tokens.</p>
-            <app-crowdsale-qr-code></app-crowdsale-qr-code>
-            <a [routerLink]="['/SANDER1']" fragment="contract-info" class="btn btn-light">See contract info</a>
+        <div class="col-sm-6 content">
+          <div class="info-wrapper" id="total-tokens-for-sale">
+            <h2 class="percentage">{{
+              (this.config.crowdsale.shares * 100) }}<sup>%</sup></h2>
+            <h4>of <span class="alt-bold">SANDER1</span> tokens for sale.</h4>
+            <h4>Dividends will be distributed quarterly starting from 01 March 2019.</h4>
+            <h4>We will be using our <a href="#" target="_blank">Telegram</a> and <a href="#" target="_blank">Medium</a>
+              channels to communicate the
+              financial reports using <a href="#" target="_blank">Balanc3</a> to track <a href="#">wallet.superander.eth</a> address.</h4>
+            <nav>
+              <a [routerLink]="['/SANDER1']" fragment="roadmap" class="btn btn-yellow">See the roadmap</a>
+            </nav>
           </div>
+        </div>
+        <div class="col-sm-6 content">
+          <div class="token-distribution">
+            <h2 class="bold">Token Distribution</h2>
+            <h4>The album will contain {{ config.song.amount }} songs.</h4>
+            <h4>Each ERC20 token is worth 1 song.</h4>
+            <h4>Each song costs {{ config.song.price.ETH | number:'1.0-3' }} ETH distributed like this:</h4>
+          </div>
+          <div id="donut"></div>
         </div>
       </div>
     </div>
@@ -118,9 +134,11 @@
       <div class="row">
         <div class="col-sm-6">
           <div class="token-contract">
-            <div class="overlay-top"></div>
+            <div class="overlay-top">
+              <a href="https://github.com/netpoe/SANDER1/blob/master/contracts/SANDER1.sol" target="_blank"><i class="icon-github"></i>
+                SANDER1.sol</a>
+            </div>
             <div class="overlay-bottom">
-              <a href="https://github.com/netpoe/SANDER1/blob/master/contracts/SANDER1.sol" target="_blank">SANDER1.sol</a>
             </div>
             <blockquote class="embedly-card">
               <h4><a href="https://ethfiddle.com/ApyLJB9lDQ">SANDER1.sol</a></h4>
@@ -129,9 +147,11 @@
         </div>
         <div class="col-sm-6">
           <div class="crowdsale-contract">
-            <div class="overlay-top"></div>
+            <div class="overlay-top">
+              <a href="https://github.com/netpoe/SANDER1/blob/master/contracts/SuperCrowdsale.sol" target="_blank"><i class="icon-github"></i> SuperCrowdsale.sol</a>
+
+            </div>
             <div class="overlay-bottom">
-              <a href="https://github.com/netpoe/SANDER1/blob/master/contracts/SuperCrowdsale.sol" target="_blank">SuperCrowdsale.sol</a>
             </div>
             <blockquote class="embedly-card">
               <h4><a href="https://ethfiddle.com/gbJ8DQ0HTT">SuperCrowdsale.sol</a></h4>
@@ -139,6 +159,19 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <section id="desert">
+    <video width="100%" height="auto" controls>
+      <source src="assets/video/Escena_dunas_nube.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+  <section id="roadmap" class="section">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="bold">Roadmap</h2>
+      </header>
     </div>
   </section>
 </main>

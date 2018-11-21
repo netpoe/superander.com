@@ -16,9 +16,9 @@
 
 @import "sass/ebm-fonts";
 @import "sass/ebm-bootstrap-overrides";
-@import "ebm/elements/ebm-icons";
 @import "ebm/control/ebm-container-control";
 @import "ebm/modules/ebm-header";
+@import "sass/ebm-icons";
 @import "sass/ebm-global";
 
 html, body {
@@ -36,8 +36,6 @@ html, body {
 .section {
   padding-bottom: $footer-height;
   padding-top: $footer-height;
-  .section-header {
-  }
   @include media-breakpoint-down(sm) {
     padding-bottom: 98px;
   }

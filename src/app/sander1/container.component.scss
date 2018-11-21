@@ -65,15 +65,9 @@
   min-height: 100vh;
   .section-header {
     text-transform: uppercase;
-    .sander-1 {
-    }
     h3 {
       @include bold;
     }
-  }
-
-  .content-left,
-  .content-right {
   }
 
   .token-img-wrapper {
@@ -87,37 +81,37 @@
   .spotify-widget-wrapper {
     margin: get-spacer(4) 0;
   }
-
-  .details {
-  }
 }
 
 #token-distro {
-  #donut {
-    width: 100%;
-  }
-  .qr-wrapper {
-    @include flex-row-center;
-    .qr {
-      width: 280px;
-    }
-  }
-  .chart-wrapper {
+  .content {
     @include flex-column-center;
-    min-height: 90vh;
+    min-height: 100vh;
   }
-  .section-header {
-    h2 {
-      @include bold;
-    }
+  .percentage {
+    @include alt-bold;
+    font-size: 180px;
     color: white;
   }
+  .info-wrapper {
+    color: white;
+  }
+  .token-distribution {
+    color: white;
+  }
+  #total-tokens-for-sale {}
 }
 
 #warning {
   @include flex-column-center;
   background-color: $yellow;
   min-height: 100vh;
+  .qr-wrapper {
+    @include flex-row-center;
+    .qr {
+      width: 280px;
+    }
+  }
   .ens-addresses {
     margin-top: get-spacer(3);
     label {
@@ -143,9 +137,14 @@
       z-index: 10;
     }
     .overlay-top {
+      @include flex-column-center;
+      text-align: right;
       height: 31px;
       width: 100%;
       top: 0;
+      a {
+        text-decoration: none;
+      }
     }
     .overlay-bottom {
       height: 71px;
@@ -153,4 +152,9 @@
       bottom: 0;
     }
   }
+}
+
+#roadmap {
+  background-color: white;
+  min-height: 100vh;
 }

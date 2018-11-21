@@ -52,6 +52,8 @@ export class ContainerComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    const self = this
+
     const data = [{
       name: 'Musicians',
       id: 'musicians',
@@ -132,6 +134,7 @@ export class ContainerComponent implements OnInit, AfterViewInit {
             mouseOver: function () {
               this.options.oldColor = this.color
               this.graphic.attr('fill', '#f5f92a')
+              self.displaySliceInfoOnHover(this.id)
             },
           }
         },
@@ -146,5 +149,9 @@ export class ContainerComponent implements OnInit, AfterViewInit {
     } catch (error) {
       console.error(error)
     }
+  }
+
+  displaySliceInfoOnHover(id) {
+    console.log(id)
   }
 }

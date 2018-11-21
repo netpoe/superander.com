@@ -15,18 +15,24 @@
     min-height: $footer-height;
   }
 
-  .footer-left {
-
-  }
-
-  .footer-right {
-  }
-
   .logo {
     text-align: right;
     img {
       height: auto;
       width: 70px;
+    }
+  }
+
+  .social-nav {
+    a {
+      margin-right: get-spacer(3);
+      color: rgba(white, 0.7);
+      font-size: $h5-font-size;
+      text-decoration: none;
+      display: inline-block;
+      &:hover {
+        color: white;
+      }
     }
   }
 }
