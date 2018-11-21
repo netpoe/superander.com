@@ -10,6 +10,8 @@
 @import "ebm/helpers/ebm-helpers";
 @import "sass/ebm-fonts-setup";
 
+$footer-height: 70px;
+
 @mixin main {
   position: relative;
   min-height: 100vh;

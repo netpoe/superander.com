@@ -1,0 +1,156 @@
+@import "sass/styles";
+
+#intro {
+  @include flex-column-center;
+  @include main;
+
+  .title {
+    margin-bottom: get-spacer(5);
+    color: white;
+    small {
+      color: rgba(white, 0.7);
+    }
+  }
+
+  .video-wrapper {
+    margin-bottom: get-spacer(3);
+    background-color: black;
+  }
+
+  .video-wrapper,
+  .qr-wrapper,
+  .info-block {
+    background-color: darken($black, 3%);
+    border-radius: $border-radius;
+    padding: get-spacer(2);
+  }
+
+  .video-wrapper {
+    padding-bottom: 0;
+  }
+
+  .info-block {
+    background-color: $yellow;
+    padding: get-spacer(3);
+    p, h4 {
+      margin-bottom: get-spacer(3);
+      &:last-child {
+        margin: 0;
+      }
+    }
+    h4, label {
+      @include bold;
+    }
+    &.outline {
+      background-color: transparent;
+      border: 2px solid $yellow;
+      color: white;
+    }
+    label {
+      text-transform: uppercase;
+      line-height: 12px;
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .created-with {
+    color: white;
+  }
+}
+
+#details {
+  @include flex-column-center;
+  background-color: white;
+  min-height: 100vh;
+  .section-header {
+    text-transform: uppercase;
+    .sander-1 {
+    }
+    h3 {
+      @include bold;
+    }
+  }
+
+  .content-left,
+  .content-right {
+  }
+
+  .token-img-wrapper {
+    @include flex-column-center;
+    margin-bottom: get-spacer(5);
+    img {
+      width: 30%;
+    }
+  }
+
+  .spotify-widget-wrapper {
+    margin: get-spacer(4) 0;
+  }
+
+  .details {
+  }
+}
+
+#token-distro {
+  #donut {
+    width: 100%;
+  }
+  .qr-wrapper {
+    @include flex-row-center;
+    .qr {
+      width: 280px;
+    }
+  }
+  .chart-wrapper {
+    @include flex-column-center;
+    min-height: 90vh;
+  }
+  .section-header {
+    h2 {
+      @include bold;
+    }
+    color: white;
+  }
+}
+
+#warning {
+  @include flex-column-center;
+  background-color: $yellow;
+  min-height: 100vh;
+  .ens-addresses {
+    margin-top: get-spacer(3);
+    label {
+      margin-right: get-spacer(2);
+      display: inline-block;
+    }
+    a {
+      @include bold;
+    }
+  }
+}
+
+#contract-info {
+  background-color: white;
+
+  .token-contract,
+  .crowdsale-contract {
+    position: relative;
+    .overlay-top,
+    .overlay-bottom {
+      background-color: white;
+      position: absolute;
+      z-index: 10;
+    }
+    .overlay-top {
+      height: 31px;
+      width: 100%;
+      top: 0;
+    }
+    .overlay-bottom {
+      height: 71px;
+      width: 100%;
+      bottom: 0;
+    }
+  }
+}

@@ -9,6 +9,7 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
     "target": "es5",
     "types": [
       "node"
@@ -22,34 +23,34 @@
     ],
     "paths": {
       "@abi/*": [
-        "assets/contracts/*"
+        "src/assets/contracts/*"
       ],
       "@service/*": [
-        "app/@service/*"
+        "src/app/@service/*"
       ],
       "@pipe/*": [
-        "app/@pipe/*"
+        "src/app/@pipe/*"
       ],
       "@factory/*": [
-        "app/@factory/*"
+        "src/app/@factory/*"
       ],
       "@deployer/*": [
-        "app/@deployer/*"
+        "src/app/@deployer/*"
       ],
       "@contract/*": [
-        "app/@contract/*"
+        "src/app/@contract/*"
       ],
       "@error/*": [
-        "app/@error/*"
+        "src/app/@error/*"
       ],
       "@shared/*": [
-        "app/shared/*"
+        "src/app/shared/*"
       ],
       "@guard/*": [
-        "app/@guard/*"
+        "src/app/@guard/*"
       ],
       "@model/*": [
-        "app/@model/*"
+        "src/app/@model/*"
       ],
       "@environment/*": [
         "environments/*"

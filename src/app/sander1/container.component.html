@@ -1,0 +1,146 @@
+<main role="main" class="site-wrapper">
+  <section id="intro" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9">
+          <h1 class="title alt-bold"><small>Invest in decentralized music,</small><br>invest in <u>SúperÁnder</u>!</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="video-wrapper">
+            <video width="100%" height="auto" controls>
+              <source src="assets/video/SuperAnder_low.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="info-block outline">
+            <h4>Amount raised: 5 ETH</h4>
+            <h4>Total cap: 249.4 ETH.</h4>
+          </div>
+          <small class="created-with">ICO powered by <a href="#" target="_blank">simpleico.com</a></small>
+        </div>
+        <div class="col-sm-3">
+          <app-crowdsale-qr-code></app-crowdsale-qr-code>
+          <div class="info-block">
+            <p class="bold">Scan this QR with your wallet and send the amount of ETH you are willing to invest.<br><a
+                [routerLink]="['/SANDER1']" fragment="details">See
+                token
+                info</a></p>
+            <p><label>Wallet:</label><a target="_blank" href="#">{{ ens.wallet.name }}</a></p>
+            <p><label>Token:</label><a target="_blank" href="#">{{ ens.sander1.name }}</a></p>
+            <p><label>Crowdsale:</label><a target="_blank" href="#">{{ ens.crowdsale.name }}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="details" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7">
+          <div class="token-img-wrapper">
+            <img src="assets/svg/superander-token-light.svg" alt="superander token SANDER1" class="superander-token">
+          </div>
+          <header class="section-header">
+            <h3>Each</h3>
+            <h2 class="sander-1 display-2 alt-bold">SANDER1</h2>
+            <h3 class="display-4">equals 1 song</h3>
+          </header>
+        </div>
+        <div class="col-sm-5">
+          <div class="details">
+            <h3 class="bold">Invest in the 1st full-length album of <span class="alt-bold">SúperÁnder!</span></h3>
+            <br>
+            <h4>Each song is worth {{ config.song.price.ETH | number:'1.0-3' }} ETH</h4>
+            <h4>The album will have {{ this.config.song.amount }} songs: <br>{{ (this.config.song.price.ETH *
+              this.config.song.amount) | number:'1.0-3' }}
+              ETH</h4>
+            <h4>By owning a share of <span class="alt-bold">SANDER1</span> tokens you'll participate in {{
+              (this.config.crowdsale.shares * 100) }}% of the
+              album
+              total earnings. Quarterly.</h4>
+          </div>
+          <div class="spotify-widget-wrapper">
+            <iframe src="https://open.spotify.com/embed/artist/4M0tyK4jalTpqDIK3MXeK1" width="100%" height="160"
+              frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </div>
+          <a class="btn btn-yellow btn-lg" [routerLink]="['/SANDER1']" fragment="token-distro">See token distribution</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="warning" class="section">
+    <div class="container-md">
+      <h2 class="display-1 bold">WARNING!</h2>
+      <h3 class="bold">Before sending ETH to this project, please verify that the addresses match:</h3>
+      <div class="ens-addresses">
+        <h4><label>Wallet: </label><a target="_blank" href="#">{{ ens.wallet.name }}</a></h4>
+        <h4><label>Token: </label><a target="_blank" href="#">{{ ens.sander1.name }}</a></h4>
+        <h4><label>SuperCrowdsale: </label><a target="_blank" href="#">{{ ens.crowdsale.name }}</a></h4>
+      </div>
+    </div>
+  </section>
+  <section id="backyard">
+    <video width="100%" height="auto" controls>
+      <source src="assets/video/intro_paisaje_music.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+  <section id="token-distro" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <header class="section-header">
+            <h2>Token Distribution</h2>
+            <h4>The album will contain {{ config.song.amount }} songs</h4>
+            <h4>Each ERC20 token is worth 1 song</h4>
+            <h4>Each song costs {{ config.song.price.ETH | number:'1.0-3' }} ETH distributed like this:</h4>
+          </header>
+          <div id="donut"></div>
+        </div>
+        <div class="col-sm-6 qr-wrapper">
+          <div class="qr">
+            <p class="text-white">Scan this QR Code with your Ethereum wallet and send ETH to it to receive SANDER1
+              tokens.</p>
+            <app-crowdsale-qr-code></app-crowdsale-qr-code>
+            <a [routerLink]="['/SANDER1']" fragment="contract-info" class="btn btn-light">See contract info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contract-info" class="section">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="bold">Contract Information</h2>
+      </header>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="token-contract">
+            <div class="overlay-top"></div>
+            <div class="overlay-bottom">
+              <a href="https://github.com/netpoe/SANDER1/blob/master/contracts/SANDER1.sol" target="_blank">SANDER1.sol</a>
+            </div>
+            <blockquote class="embedly-card">
+              <h4><a href="https://ethfiddle.com/ApyLJB9lDQ">SANDER1.sol</a></h4>
+            </blockquote>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="crowdsale-contract">
+            <div class="overlay-top"></div>
+            <div class="overlay-bottom">
+              <a href="https://github.com/netpoe/SANDER1/blob/master/contracts/SuperCrowdsale.sol" target="_blank">SuperCrowdsale.sol</a>
+            </div>
+            <blockquote class="embedly-card">
+              <h4><a href="https://ethfiddle.com/gbJ8DQ0HTT">SuperCrowdsale.sol</a></h4>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>
