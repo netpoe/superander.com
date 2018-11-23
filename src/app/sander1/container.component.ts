@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { EthereumService } from '@decentralizedtechnologies/scui-lib';
+import { EthereumService, WalletService } from '@decentralizedtechnologies/scui-lib';
 import { ActivatedRoute } from '@angular/router';
+import { SuperCrowdsaleContract } from '@contract/supercrowdsale.contract';
 
 const Highcharts = require('highcharts');
 
@@ -38,8 +39,11 @@ export class ContainerComponent implements OnInit, AfterViewInit {
     }
   }
 
+  supercrowdsale: SuperCrowdsaleContract
+
   constructor(
     public ethereumService: EthereumService,
+    public walletService: WalletService,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -48,7 +52,12 @@ export class ContainerComponent implements OnInit, AfterViewInit {
         document.querySelector(`#${fragment}`).scrollIntoView({ behavior: 'smooth' })
       }
     })
-    // this.init()
+
+    this.supercrowdsale = new SuperCrowdsaleContract(this.walletService.getInstance())
+    this.supercrowdsale.connect()
+    this.supercrowdsale.setAddress(SuperCrowdsaleContract.ROPSTEN_ADDRESS)
+
+    this.init()
   }
 
   ngAfterViewInit() {
@@ -144,8 +153,10 @@ export class ContainerComponent implements OnInit, AfterViewInit {
 
   async init() {
     try {
-      const price = await this.ethereumService.convertCurrency('USD', 'ETH')
-      this.config.song.price.ETH = price.ETH * this.config.song.price.USD
+      // const price = await this.ethereumService.convertCurrency('USD', 'ETH')
+      // this.config.song.price.ETH = price.ETH * this.config.song.price.USD
+      this.supercrowdsale.getWeiRaised()
+      this.supercrowdsale.getCap()
     } catch (error) {
       console.error(error)
     }

@@ -15,8 +15,8 @@
             </video>
           </div>
           <div class="info-block outline">
-            <h4>Amount raised: 5 ETH</h4>
-            <h4>Total cap: 249.4 ETH.</h4>
+            <h4>Amount raised: {{ supercrowdsale.weiRaised | weiToEther }} ETH</h4>
+            <h4>Total cap: {{ supercrowdsale.cap | weiToEther }} ETH.</h4>
           </div>
           <small class="created-with">ICO powered by <a href="#" target="_blank">simpleico.com</a></small>
         </div>
