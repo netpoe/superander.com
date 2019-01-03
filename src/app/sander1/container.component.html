@@ -52,11 +52,11 @@
             <h3 class="bold">Invest in the 1st full-length album of <span class="alt-bold">SúperÁnder!</span></h3>
             <br>
             <h4>Each song is worth {{ config.song.price.ETH | number:'1.0-3' }} ETH</h4>
-            <h4>The album will have {{ this.config.song.amount }} songs: <br>{{ (this.config.song.price.ETH *
-              this.config.song.amount) | number:'1.0-3' }}
+            <h4>The album will have {{ config.song.amount }} songs: <br>{{ (config.song.price.ETH *
+              config.song.amount) | number:'1.0-3' }}
               ETH</h4>
             <h4>By owning a share of <span class="alt-bold">SANDER1</span> tokens you'll participate in {{
-              (this.config.crowdsale.shares * 100) }}% of the
+              (config.crowdsale.shares * 100) }}% of the
               album
               total earnings. Quarterly.</h4>
           </div>
@@ -103,7 +103,7 @@
         <div class="col-sm-6 content">
           <div class="info-wrapper" id="total-tokens-for-sale">
             <h2 class="percentage">{{
-              (this.config.crowdsale.shares * 100) }}<sup>%</sup></h2>
+              (config.crowdsale.shares * 100) }}<sup>%</sup></h2>
             <h4>of <span class="alt-bold">SANDER1</span> tokens for sale.</h4>
             <h4>Dividends will be distributed quarterly starting from 01 March 2019.</h4>
             <h4>We will be using our <a href="#" target="_blank">Telegram</a> and <a href="#" target="_blank">Medium</a>
@@ -291,6 +291,95 @@
           <p><strong>Studio</strong>: TBD</p>
         </div>
       </article>
+    </div>
+    <div class="container">
+      <article>
+        <div class="date">
+          <span class="day">December</span>
+          <span class="year">2019</span>
+        </div>
+        <div class="description">
+          <h4>The Dutch Bomba!</h4>
+          <p><strong>Genre</strong>: Industrial Mexico Techno.<br>With dutch rap.</p>
+          <p><strong>Studio</strong>: TBD</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section id="facks" class="section">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="bold">FACKs</h2>
+        <h4>Frequently Asked Ckuestions</h4>
+      </header>
+      <div class="row questions">
+        <div class="col-sm-6">
+          <article class="question">
+            <h5>How should I collect my dividends?</h5>
+            <p>Every quarter, if there is any profit, you should see in your Ethereum wallet a transaction from wallet.superander.eth ({{ ens.wallet.address }}) with an ETH transfer corresponding to your participation in the {{ config.crowdsale.shares * 100 }}% of the total supply of SANDER1 tokens.</p>
+          </article>
+        </div>
+        <div class="col-sm-6">
+          <article class="question">
+            <h5>How do I know about any profit or income?</h5>
+            <p>Transactions are transparent in the Ethereum blockchain network. Any day at any time, you can track the wallet.superander.eth in <a href="#" target="_blank">etherscan.io</a>.</p>
+            <p>If there is any income or profit in any other currency, Súper Ánder will publish a report every 3 months via its <a href="#">medium</a> and <a href="#">telegram</a> channels.</p>
+          </article>
+        </div>
+        <div class="col-sm-6">
+          <article class="question">
+            <h5>How do I know about any expenses?</h5>
+            <p>Transactions are transparent in the Ethereum blockchain network. Any day at any time, you can track the wallet.superander.eth in <a href="#" target="_blank">etherscan.io</a>.</p>
+            <p>Súper Ánder will publish a report every 3 months via its <a href="#">medium</a> and <a href="#">telegram</a> channels. In a decentralized economy, you are responsible for tracking the projects you invest in. Súper Ánder will not notify you via email or any other private channel.</p>
+          </article>
+        </div>
+        <div class="col-sm-6">
+          <article class="question">
+            <h5>Can I be part of the project other than as an investor?</h5>
+            <p>Please do! Send an email to <a href="mailto:soporte@superander.com">soporte@superander.com</a> with your proposal.</p>
+          </article>
+        </div>
+        <div class="col-sm-6">
+          <article class="question">
+            <h5>How can I invest in Súper Ánder?</h5>
+            <p>If you are familiar with the concept of stocks or shares, the following should be straight forward:</p>
+            <p>The Ethereum blockchain network allows anyone with an Ethereum wallet, to send ETH (the currency of the network) to a special smart contract called a Crowdsale contract; by sending ETH to the contract you will get SANDER1 tokens in exchange. SANDER1 tokens are an official representation of the value provided by the project,in this case the songs, merchandising and concerts that the project produces. By owning part of the total supply of SANDER1 tokens you participate in the profits of the project as long as you own them and as long as you have access to your wallet.</p>
+          </article>
+        </div>
+        <div class="col-sm-6">
+          <article class="question">
+            <h5>How can I make sure I'm sending ETH to the correct contract address?</h5>
+            <p>Before sending any ETH, please confirm that <a href="#" target="_blank">supercrowdsale.superander.eth ({{ ens.crowdsale.address }})</a> is the Ethereum address you are sending the transaction to. superander.eth is the official ENS name for the project, meaning that only we can access the ETH you are sending.</p>
+            <p>IF THE ADDRESS DOES NOT MATCH THE ENS LOOKUP, do not proceed.</p>
+          </article>
+        </div>
+        <div class="col-sm-6">
+          <article class="question">
+            <h5>Can I have a relevant opinion over the project decisions?</h5>
+            <p>Sure you can! As a SANDER1 holder you are also an advisor. Keep in mind that the project members own more than 51% of the SANDER1 supply, so the final decision will be made by them.</p>
+            <p>Share your vision to <a href="mailto:soporte@superander.com">soporte@superander.com</a></p>
+          </article>
+        </div>
+        <div class="col-sm-6">
+          <article class="question">
+            <h5>What happens if Súper Ánder does not make any profit?</h5>
+            <p>Not making any profit is a possibility. As with any other project in any industry, Súper Ánder is subject to the supply and demand of the listeners and fans. We will make our best to NOT DISSAPOINT OUR FANS and INVESTORS.</p>
+          </article>
+        </div>
+        <div class="col-sm-6">
+          <article class="question">
+            <h5>As an investor, am I backed by an official financial institution?</h5>
+            <p>No. No government or financial institution can help you if you lose your funds, lose access to your wallet or if we run away with the money. It would be easy to spot us in one of our concerts though.</p>
+          </article>
+        </div>
+        <div class="col-sm-6">
+          <article class="question">
+            <h5>What is the extent of my participation of the SANDER1 token dividends?</h5>
+            <p>You will be acreditable for dividends until we finish recording, mixing and mastering the 12 songs of the album. Everything that we produce between that period, including concerts, merchandising, or any other form of profit, is yours too.</p>
+            <p>You will be able to invest in SANDER2 if the plans go as expected.</p>
+          </article>
+        </div>
+      </div>
     </div>
   </section>
 </main>
