@@ -2,6 +2,8 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { EthereumService, WalletService } from '@decentralizedtechnologies/scui-lib';
 import { ActivatedRoute } from '@angular/router';
 import { SuperCrowdsaleContract } from '@contract/supercrowdsale.contract';
+import { ENS } from '@model/ens';
+import { Config } from '@model/config';
 
 const Highcharts = require('highcharts');
 
@@ -11,39 +13,14 @@ const Highcharts = require('highcharts');
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent implements OnInit, AfterViewInit {
-  ens = {
-    wallet: {
-      name: 'wallet.superander.eth',
-      address: '0x24b2e8C86Cc5a378b184b64728dB1A8484D844eC',
-    },
-    sander1: {
-      name: 'sander1.superander.eth',
-      address: '0x123',
-    },
-    crowdsale: {
-      name: 'supercrowdsale.superander.eth',
-      address: '0x123',
-    }
-  }
-
-  config = {
-    song: {
-      price: {
-        USD: 9079.65,
-        ETH: 24.94,
-      },
-      amount: 12,
-    },
-    crowdsale: {
-      shares: 0.49
-    }
-  }
 
   supercrowdsale: SuperCrowdsaleContract
 
   constructor(
     public ethereumService: EthereumService,
     public walletService: WalletService,
+    public ens: ENS,
+    public config: Config,
     private route: ActivatedRoute) { }
 
   ngOnInit() {

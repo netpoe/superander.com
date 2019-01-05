@@ -28,6 +28,9 @@
       "@service/*": [
         "src/app/@service/*"
       ],
+      "@model/*": [
+        "src/app/@model/*"
+      ],
       "@pipe/*": [
         "src/app/@pipe/*"
       ],

@@ -1,0 +1,14 @@
+@import "sass/styles";
+
+#facks {
+  color: white;
+  .questions {
+    padding: get-spacer(5) 0;
+    .question {
+      margin-bottom: get-spacer(5);
+      h5 {
+        @include bold;
+      }
+    }
+  }
+}

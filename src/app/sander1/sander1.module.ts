@@ -6,6 +6,7 @@ import { ContainerComponent } from './container.component';
 import { SharedModule } from '@shared/shared.module';
 import { SharedModule as SCUISharedModule } from '@decentralizedtechnologies/scui-lib';
 import { RoadmapComponent } from './roadmap/roadmap.component';
+import { FacksComponent } from './facks/facks.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { RoadmapComponent } from './roadmap/roadmap.component';
     SCUISharedModule,
     SharedModule,
   ],
-  declarations: [ContainerComponent, RoadmapComponent]
+  declarations: [ContainerComponent, RoadmapComponent, FacksComponent]
 })
 export class Sander1Module { }
