@@ -7,6 +7,8 @@ import { SharedModule } from '@shared/shared.module';
 import { SharedModule as SCUISharedModule } from '@decentralizedtechnologies/scui-lib';
 import { RoadmapComponent } from './roadmap/roadmap.component';
 import { FacksComponent } from './facks/facks.component';
+import { SmartContractDetailsComponent } from './smart-contract-details/smart-contract-details.component';
+import { TokenDetailsComponent } from './token-details/token-details.component';
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { FacksComponent } from './facks/facks.component';
     SCUISharedModule,
     SharedModule,
   ],
-  declarations: [ContainerComponent, RoadmapComponent, FacksComponent]
+  declarations: [ContainerComponent, RoadmapComponent, FacksComponent, SmartContractDetailsComponent, TokenDetailsComponent]
 })
 export class Sander1Module { }

@@ -1,0 +1,31 @@
+@import "sass/styles";
+
+#contract-info {
+  background-color: white;
+
+  .token-contract,
+  .crowdsale-contract {
+    position: relative;
+    .overlay-top,
+    .overlay-bottom {
+      background-color: white;
+      position: absolute;
+      z-index: 10;
+    }
+    .overlay-top {
+      @include flex-column-center;
+      text-align: right;
+      height: 31px;
+      width: 100%;
+      top: 0;
+      a {
+        text-decoration: none;
+      }
+    }
+    .overlay-bottom {
+      height: 71px;
+      width: 100%;
+      bottom: 0;
+    }
+  }
+}

@@ -59,49 +59,6 @@
   }
 }
 
-#details {
-  @include flex-column-center;
-  background-color: white;
-  min-height: 100vh;
-  .section-header {
-    text-transform: uppercase;
-    h3 {
-      @include bold;
-    }
-  }
-
-  .token-img-wrapper {
-    @include flex-column-center;
-    margin-bottom: get-spacer(5);
-    img {
-      width: 30%;
-    }
-  }
-
-  .spotify-widget-wrapper {
-    margin: get-spacer(4) 0;
-  }
-}
-
-#token-distro {
-  .content {
-    @include flex-column-center;
-    min-height: 100vh;
-  }
-  .percentage {
-    @include alt-bold;
-    font-size: 180px;
-    color: white;
-  }
-  .info-wrapper {
-    color: white;
-  }
-  .token-distribution {
-    color: white;
-  }
-  #total-tokens-for-sale {}
-}
-
 #warning {
   @include flex-column-center;
   background-color: $yellow;
@@ -120,36 +77,6 @@
     }
     a {
       @include bold;
-    }
-  }
-}
-
-#contract-info {
-  background-color: white;
-
-  .token-contract,
-  .crowdsale-contract {
-    position: relative;
-    .overlay-top,
-    .overlay-bottom {
-      background-color: white;
-      position: absolute;
-      z-index: 10;
-    }
-    .overlay-top {
-      @include flex-column-center;
-      text-align: right;
-      height: 31px;
-      width: 100%;
-      top: 0;
-      a {
-        text-decoration: none;
-      }
-    }
-    .overlay-bottom {
-      height: 71px;
-      width: 100%;
-      bottom: 0;
     }
   }
 }

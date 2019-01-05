@@ -1,0 +1,44 @@
+@import "sass/styles";
+
+#details {
+  @include flex-column-center;
+  background-color: white;
+  min-height: 100vh;
+  .section-header {
+    text-transform: uppercase;
+    h3 {
+      @include bold;
+    }
+  }
+
+  .token-img-wrapper {
+    @include flex-column-center;
+    margin-bottom: get-spacer(5);
+    img {
+      width: 30%;
+    }
+  }
+
+  .spotify-widget-wrapper {
+    margin: get-spacer(4) 0;
+  }
+}
+
+#token-distro {
+  .content {
+    @include flex-column-center;
+    min-height: 100vh;
+  }
+  .percentage {
+    @include alt-bold;
+    font-size: 180px;
+    color: white;
+  }
+  .info-wrapper {
+    color: white;
+  }
+  .token-distribution {
+    color: white;
+  }
+  #total-tokens-for-sale {}
+}

@@ -9,6 +9,9 @@
       h5 {
         @include bold;
       }
+      p {
+        color: $gray-400;
+      }
     }
   }
 }

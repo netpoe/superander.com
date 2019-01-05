@@ -7,8 +7,13 @@
         </a>
       </div>
       <div class="col-sm-4">
-        <a href="#" class="menu-item">
+        <a [routerLink]="['/SANDER1/details']" class="menu-item">
           <h3><span class="alt-bold">SANDER1</span><br>token details</h3>
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a [routerLink]="['/SANDER1/details']" fragment="token-distro" class="menu-item">
+          <h3><span class="alt-bold">SANDER1</span><br>token distribution</h3>
         </a>
       </div>
       <div class="col-sm-4">
@@ -28,7 +33,7 @@
         </a>
       </div>
       <div class="col-sm-4">
-        <a [routerLink]="['/SANDER1/roadmap']" fragment="contracts" class="menu-item">
+        <a [routerLink]="['/SANDER1/smart-contract-details']" fragment="contracts" class="menu-item">
           <h3>Smart Contract<br><small>details</small></h3>
         </a>
       </div>
