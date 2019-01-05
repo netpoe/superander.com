@@ -1,1 +1,34 @@
 @import "sass/styles";
+
+#about {
+  min-height: 50vh;
+  color: white;
+  .anderground {
+    color: $gray-500;
+  }
+
+  .spotify-widget-wrapper {
+    margin-top: get-spacer(4);
+  }
+}
+
+#the-concept {
+  min-height: 50vh;
+  color: white;
+}
+
+#logo {
+  min-height: 50vh;
+  .title {
+    color: white;
+  }
+  img {
+    margin-bottom: get-spacer(4);
+    width: 280px;
+    height: auto;
+  }
+  .qr {
+    display: inline-block;
+    width: 280px;
+  }
+}
