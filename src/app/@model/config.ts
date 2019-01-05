@@ -14,7 +14,8 @@ export class Config {
   }
 
   crowdsale = {
-    shares: 0.49
+    shares: 0.49,
+    cap: 225,
   }
 
 }

@@ -59,24 +59,4 @@
   }
 }
 
-#warning {
-  @include flex-column-center;
-  background-color: $yellow;
-  min-height: 100vh;
-  .qr-wrapper {
-    @include flex-row-center;
-    .qr {
-      width: 280px;
-    }
-  }
-  .ens-addresses {
-    margin-top: get-spacer(3);
-    label {
-      margin-right: get-spacer(2);
-      display: inline-block;
-    }
-    a {
-      @include bold;
-    }
-  }
-}
+

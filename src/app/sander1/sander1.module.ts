@@ -9,6 +9,8 @@ import { RoadmapComponent } from './roadmap/roadmap.component';
 import { FacksComponent } from './facks/facks.component';
 import { SmartContractDetailsComponent } from './smart-contract-details/smart-contract-details.component';
 import { TokenDetailsComponent } from './token-details/token-details.component';
+import { AboutComponent } from './about/about.component';
+import { HowToComponent } from './how-to/how-to.component';
 
 @NgModule({
   imports: [
@@ -17,6 +19,6 @@ import { TokenDetailsComponent } from './token-details/token-details.component';
     SCUISharedModule,
     SharedModule,
   ],
-  declarations: [ContainerComponent, RoadmapComponent, FacksComponent, SmartContractDetailsComponent, TokenDetailsComponent]
+  declarations: [ContainerComponent, RoadmapComponent, FacksComponent, SmartContractDetailsComponent, TokenDetailsComponent, AboutComponent, HowToComponent]
 })
 export class Sander1Module { }

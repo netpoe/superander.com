@@ -25,6 +25,10 @@ html, body {
   background-color: $black;
 }
 
+body {
+  font-size: 16px;
+}
+
 .site-wrapper {
   > .section {
     &:last-child {

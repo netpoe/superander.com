@@ -1,0 +1,78 @@
+@import "sass/styles";
+
+.ens-addresses {
+  @include flex-row-center;
+  margin-top: get-spacer(3);
+  text-align: left;
+  label {
+    margin-right: get-spacer(2);
+    display: inline-block;
+    min-width: 149px;
+  }
+  a {
+    @include bold;
+  }
+}
+
+#warning {
+  @include flex-column-center;
+  background-color: $yellow;
+  text-align: center;
+  min-height: 75vh;
+}
+
+#how-to {
+  background-color: white;
+  .qr-wrapper {
+    @include flex-row-center;
+    .qr {
+      width: 280px;
+    }
+  }
+  .steps-wrapper {
+    @include flex-column-center;
+    min-height: 70vh;
+  }
+  .steps {
+    @include list-unstyled;
+    list-style: decimal;
+    li {
+      h5 {
+        @include bold;
+      }
+    }
+  }
+}
+
+#detailed-information {
+  background-color: white;
+  min-height: 100vh;
+  .section-header {
+    margin-bottom: get-spacer(5);
+  }
+  img {
+    margin-bottom: get-spacer(3);
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  .qr {
+    width: 275px;
+  }
+  .separator {
+    flex-wrap: wrap;
+    display: flex;
+    &:after {
+      background-color: $gray-100;
+      margin: get-spacer(4) 40%;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 3px;
+    }
+  }
+}
+
+#about-the-crowdsale-contract {
+  background-color: $yellow;
+}

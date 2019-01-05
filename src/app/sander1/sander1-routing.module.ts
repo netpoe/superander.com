@@ -5,6 +5,8 @@ import { RoadmapComponent } from './roadmap/roadmap.component';
 import { FacksComponent } from './facks/facks.component';
 import { SmartContractDetailsComponent } from './smart-contract-details/smart-contract-details.component';
 import { TokenDetailsComponent } from './token-details/token-details.component';
+import { HowToComponent } from './how-to/how-to.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,14 @@ const routes: Routes = [
   {
     path: 'details',
     component: TokenDetailsComponent
+  },
+  {
+    path: 'how-to',
+    component: HowToComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   },
 ];
 
