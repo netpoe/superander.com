@@ -23,11 +23,11 @@
         <ol class="steps">
           <li>
             <h5>Download an Ethereum wallet application</h5>
-            <p>We recommend <a href="#">Trust wallet</a> as it is backed by Binance,<br>a well know crypto-exchange.</p>
+            <p>We recommend <a href="#">Trust wallet</a> as it is backed by Binance,<br>a well known crypto-exchange.</p>
           </li>
           <li>
             <h5>Create an Ethereum address</h5>
-            <p>Your address looks like this: {{ ens.wallet.address }},<br>and it is unique to you.</p>
+            <p>Your address will look like this: {{ ens.wallet.address }},<br>and it is unique to you.</p>
             <p>This address will hold the tokens you receive from your investment.</p>
           </li>
           <li>
@@ -37,13 +37,50 @@
           </li>
         </ol>
         <nav>
-          <a [routerLink]="['/SANDER1/how-to']" fragment="detailed-information" class="btn btn-yellow">Read detailed information</a>
+          <a [routerLink]="['/SANDER1/how-to']" fragment="how-to-menu" class="btn btn-yellow">Read detailed information</a>
         </nav>
       </div>
       <div class="col-sm-5 qr-wrapper">
         <div class="qr">
           <app-crowdsale-qr-code></app-crowdsale-qr-code>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-to-menu" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <a [routerLink]="['/SANDER1/how-to']" fragment="creating-an-ethereum-wallet" class="menu-item">
+          <h3>Creating an Ethereum wallet</h3>
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a [routerLink]="['/SANDER1/how-to']" fragment="the-seed-phrase" class="menu-item">
+          <h3>Securing your wallet</h3>
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a [routerLink]="['/SANDER1/how-to']" fragment="managing-your-wallet" class="menu-item">
+          <h3>Managing your wallet</h3>
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a [routerLink]="['/SANDER1/how-to']" fragment="buying-ether" class="menu-item">
+          <h3>Buying Ether (ETH)</h3>
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a [routerLink]="['/SANDER1/how-to']" fragment="buying-tokens" class="menu-item">
+          <h3>Buying <span class="alt-bold">SANDER1</span> tokens</h3>
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a [routerLink]="['/SANDER1/how-to']" fragment="about-the-crowdsale-contract" class="menu-item">
+          <h3>The SuperCrowdsale smart contract</h3>
+        </a>
       </div>
     </div>
   </div>
@@ -59,7 +96,7 @@
     <p>In order to hold or have control of these "shares", which we'll call <em>tokens</em>, you need an Ethereum wallet. A wallet is an application that can either be a mobile app, a browser extension, a web app or even hardware.</p>
     <p>Any of these wallets will allow you to access the same exact Ethereum address via your <strong>private keys</strong>.</p>
     <p>In this tutorial, we will display screenshots of <a href="#">Trust Wallet</a>, a popular mobile application for iOS or Android that allows you to create and manage Ethereum addresses.</p>
-    <h4>Creating an Ethereum wallet</h4>
+    <h4 class="bold" id="creating-an-ethereum-wallet">Creating an Ethereum wallet</h4>
     <div class="row separator">
       <div class="col-sm-4">
         <img src="assets/img/tutorial/settings.jpg" alt="settings">
@@ -87,12 +124,12 @@
       </div>
     </div>
     <div class="separator">
-      <h4>The 12 words seed phrase</h4>
+      <h4 class="bold" id="the-seed-phrase">The 12 words seed phrase</h4>
       <p>Also known as the "mnemonic phrase" or "mnemonic seed", this <em>12 words phrase</em> is unique to the entire Ethereum network.</p>
       <p class="text-danger"><strong>THIS IS YOUR PASSWORD TO YOUR WALLET</strong>. It is not stored in any server or database, only in your device. <strong>Losing your phrase means losing your funds, so pay attention</strong>.</p>
       <p>At this point, Trust Wallet should request that you copy and store these 12 words somewhere safe. Copy and paste the phrase in your password manager or in a place only you have access to and confirm the phrase in the next view.</p>
     </div>
-    <h4>Managing your wallet</h4>
+    <h4 class="bold" id="managing-your-wallet">Managing your wallet</h4>
     <div class="row separator">
       <div class="col-sm-4">
         <img src="assets/img/tutorial/my-investments-wallet.jpg" alt="my-investments-wallet">
@@ -111,7 +148,15 @@
         <img src="assets/img/tutorial/tokens.jpg" alt="tokens">
       </div>
     </div>
-    <h4>Buying tokens</h4>
+    <h4 class="bold" id="buying-ether">Buying Ether</h4>
+    <div class="separator">
+      <p>In order to interact with the Ethereum network, you need ETH. ETH is the symbol of the Ether crypto-currency.</p>
+      <p>Owning ETH allows you to send money to another wallet. You can send money to smart contracts too.</p>
+      <p>Buying ETH is straight forward, think of it as any other currency exchange transaction. You will buy ETH in exchange of USD, MXN, AUD, BP, EURO; or whatever your currency is.</p>
+      <p>Here is a list of exchanges where you can buy ETH with Visa, Mastercard and sometimes a Wire Transfer:</p>
+      <a href="https://list.wiki/Cryptocurrency_Exchanges#List_of_Cryptocurrency_Exchange_Platforms" target="_blank" class="btn btn-yellow">List of crypto-currency exchanges</a>
+    </div>
+    <h4 class="bold" id="buying-tokens">Buying tokens</h4>
     <div class="row separator">
       <div class="col-sm-4">
         <img src="assets/img/tutorial/ethereum.jpg" alt="ethereum">
@@ -146,7 +191,6 @@
 </section>
 <section id="about-the-crowdsale-contract" class="section">
   <div class="container-md">
-    <small>(parenthesis)</small>
     <h2 class="bold">About the <em>SuperCrowdsale</em> smart contract</h2>
     <h5>The Ethereum address that you will input in the recipient address is not the <a href="#" target="_blank">wallet.superander.eth</a> address. This other address is special because you will <strong>send the ETH funds to a smart contract, not to another wallet.</strong></h5>
     <p>This smart contract is a custom crowdsale contract called SuperCrowdsale, <a href="https://github.com/netpoe/SANDER1/blob/master/contracts/SuperCrowdsale.sol" target="_blank">(you can check the code here)</a>. This smart contract is specifically designed to send <span class="alt-bold">SANDER1</span> tokens in exchange of ETH.</p>

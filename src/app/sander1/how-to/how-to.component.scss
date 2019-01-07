@@ -14,6 +14,12 @@
   }
 }
 
+#how-to-menu {
+  .menu-item {
+    @include menu-item;
+  }
+}
+
 #warning {
   @include flex-column-center;
   background-color: $yellow;
@@ -47,6 +53,9 @@
 #detailed-information {
   background-color: white;
   min-height: 100vh;
+  p {
+    font-size: $h5-font-size;
+  }
   .section-header {
     margin-bottom: get-spacer(5);
   }

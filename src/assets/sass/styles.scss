@@ -20,3 +20,48 @@ $footer-height: 70px;
     min-height: 50vh;
   }
 }
+
+@mixin menu-item {
+  @include flex-column-center;
+  @include normalize-text;
+  border-radius: $border-radius;
+  margin-bottom: get-spacer(3);
+  background-color: white;
+  border: 3px solid $black;
+  padding: get-spacer(3);
+  text-decoration: none;
+  min-height: 160px;
+  color: $black;
+  &:hover {
+    background-color: $black;
+    color: white;
+    h3 {
+      @include bold;
+    }
+  }
+  &.main {
+    background-color: $yellow;
+    border: 3px solid white;
+    h3 {
+      @include bold;
+    }
+    &:hover {
+      background-color: $black;
+    }
+  }
+  &.about {
+    @include flex-align-center;
+    .logo {
+      display: none;
+      width: 180px;
+    }
+    &:hover {
+      .logo {
+        display: block;
+      }
+      h3 {
+        display: none;
+      }
+    }
+  }
+}
