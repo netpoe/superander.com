@@ -18,6 +18,7 @@ export class ENS {
   crowdsale = {
     name: 'supercrowdsale.superander.eth',
     address: '0x123',
+    img: 'assets/img/supercrowdsale-qr.png'
   }
 
   constructor() { }

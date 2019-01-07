@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ENS } from '@model/ens';
+import { Config } from '@model/config';
 
 @Component({
   selector: 'app-crowdsale-qr-code',
@@ -7,16 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrowdsaleQrCodeComponent implements OnInit {
 
-  crowdsale = {
-    address: {
-      mainnet: '0xb10b0e88f1f6871ffe778078b914161b9e9ebedd'
-    },
-    qr: {
-      img: 'assets/img/supercrowdsale-qr.png'
-    }
-  }
-
-  constructor() { }
+  constructor(
+    public ens: ENS,
+    public config: Config) { }
 
   ngOnInit() {
   }
