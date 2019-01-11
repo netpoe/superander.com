@@ -1,0 +1,15 @@
+@import "sass/styles";
+
+.ens-addresses {
+  @include flex-row-center;
+  margin-top: get-spacer(3);
+  text-align: left;
+  label {
+    margin-right: get-spacer(2);
+    display: inline-block;
+    min-width: 149px;
+  }
+  a {
+    @include bold;
+  }
+}

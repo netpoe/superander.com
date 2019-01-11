@@ -22,12 +22,8 @@
       <div class="col-sm-3">
         <app-crowdsale-qr-code></app-crowdsale-qr-code>
         <div class="info-block">
-          <p class="bold">Scan this QR with your wallet and send the amount of ETH you are willing to invest.<br><a [routerLink]="['/SANDER1']" fragment="details">See
-              token
-              info</a></p>
-          <p><label>Wallet:</label><a target="_blank" href="#">{{ ens.wallet.name }}</a></p>
-          <p><label>Token:</label><a target="_blank" href="#">{{ ens.sander1.name }}</a></p>
-          <p><label>Crowdsale:</label><a target="_blank" href="#">{{ ens.crowdsale.name }}</a></p>
+          <p class="bold">Scan this QR with your wallet and send the amount of ETH you are willing to invest.<br><a [routerLink]="['/SANDER1/details']">See token info</a></p>
+          <app-ens-addresses></app-ens-addresses>
         </div>
       </div>
     </div>

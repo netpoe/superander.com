@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ENS } from '@model/ens';
 import { Config } from '@model/config';
+import { SuperCrowdsaleContract } from '@contract/supercrowdsale.contract';
+import { EthereumService, WalletService } from '@decentralizedtechnologies/scui-lib';
 
 const Highcharts = require('highcharts');
 
@@ -11,11 +13,29 @@ const Highcharts = require('highcharts');
 })
 export class TokenDetailsComponent implements OnInit, AfterViewInit {
 
+  supercrowdsale: SuperCrowdsaleContract
+
   constructor(
     public ens: ENS,
+    public ethereumService: EthereumService,
+    public walletService: WalletService,
     public config: Config) { }
 
   ngOnInit() {
+    this.supercrowdsale = new SuperCrowdsaleContract(this.walletService.getInstance())
+    this.supercrowdsale.connect()
+    this.supercrowdsale.setAddress(SuperCrowdsaleContract.ROPSTEN_ADDRESS)
+
+    this.init()
+  }
+
+  async init() {
+    try {
+      this.supercrowdsale.getWeiRaised()
+      this.supercrowdsale.getCap()
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   ngAfterViewInit() {

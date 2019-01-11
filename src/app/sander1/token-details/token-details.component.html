@@ -16,13 +16,8 @@
           <h3 class="bold">Invest in the 1st full-length album of <span class="alt-bold">SúperÁnder!</span></h3>
           <br>
           <h4>Each song is worth {{ config.song.price.ETH | number:'1.0-3' }} ETH</h4>
-          <h4>The album will have {{ config.song.amount }} songs: <br>{{ (config.song.price.ETH *
-            config.song.amount) | number:'1.0-3' }}
-            ETH</h4>
-          <h4>By owning a share of <span class="alt-bold">SANDER1</span> tokens you'll participate in {{
-            (config.crowdsale.shares * 100) }}% of the
-            album
-            total earnings. Quarterly.</h4>
+          <h4>The album will have {{ config.song.amount }} songs: <br>{{ supercrowdsale.cap | weiToEther }} ETH</h4>
+          <h4>By owning a share of <span class="alt-bold">SANDER1</span> tokens you'll participate in {{ (config.crowdsale.shares * 100) }}% of the album total earnings. Quarterly.</h4>
         </div>
         <a class="btn btn-yellow btn-lg" [routerLink]="['/SANDER1/details']" fragment="token-distro">See token distribution</a>
       </div>

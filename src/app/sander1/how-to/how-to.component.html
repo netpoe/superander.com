@@ -2,13 +2,7 @@
   <div class="container">
     <h2 class="display-1 bold">WARNING!</h2>
     <h3 class="bold">Before sending ETH to this crowdsale,<br>please verify that the addresses match:</h3>
-    <div class="ens-addresses">
-      <div>
-        <h4><label>Wallet: </label><a target="_blank" href="#">{{ ens.wallet.name }}</a></h4>
-        <h4><label>Token: </label><a target="_blank" href="#">{{ ens.sander1.name }}</a></h4>
-        <h4><label>Crowdsale: </label><a target="_blank" href="#">{{ ens.crowdsale.name }}</a></h4>
-      </div>
-    </div>
+    <app-ens-addresses></app-ens-addresses>
   </div>
 </section>
 
@@ -23,7 +17,7 @@
         <ol class="steps">
           <li>
             <h5>Download an Ethereum wallet application</h5>
-            <p>We recommend <a href="#">Trust wallet</a> as it is backed by Binance,<br>a well known crypto-exchange.</p>
+            <p>We recommend <a href="https://trustwallet.com/" target="_blank">Trust wallet</a> as it is backed by Binance,<br>a well known crypto-exchange.</p>
           </li>
           <li>
             <h5>Create an Ethereum address</h5>
@@ -54,7 +48,7 @@
     <div class="row">
       <div class="col-sm-4">
         <a [routerLink]="['/SANDER1/how-to']" fragment="creating-an-ethereum-wallet" class="menu-item">
-          <h3>Creating an Ethereum wallet</h3>
+          <h3>Creating an <br>Ethereum wallet</h3>
         </a>
       </div>
       <div class="col-sm-4">
@@ -74,7 +68,7 @@
       </div>
       <div class="col-sm-4">
         <a [routerLink]="['/SANDER1/how-to']" fragment="buying-tokens" class="menu-item">
-          <h3>Buying <span class="alt-bold">SANDER1</span> tokens</h3>
+          <h3>Buying<br> <span class="alt-bold">SANDER1</span> tokens</h3>
         </a>
       </div>
       <div class="col-sm-4">
@@ -95,7 +89,7 @@
     <h5>Some of these concepts may sound new to you, but the main idea is that you will hold "shares" of the 1st studio album of <span class="alt-bold">Súper Ánder</span> and that you will receive dividends in form of ETH every 3 months depending on the percentage of shares that you posess.</h5>
     <p>In order to hold or have control of these "shares", which we'll call <em>tokens</em>, you need an Ethereum wallet. A wallet is an application that can either be a mobile app, a browser extension, a web app or even hardware.</p>
     <p>Any of these wallets will allow you to access the same exact Ethereum address via your <strong>private keys</strong>.</p>
-    <p>In this tutorial, we will display screenshots of <a href="#">Trust Wallet</a>, a popular mobile application for iOS or Android that allows you to create and manage Ethereum addresses.</p>
+    <p>In this tutorial, we will display screenshots of <a href="https://trustwallet.com/" target="_blank">Trust Wallet</a>, a popular mobile application for iOS or Android that allows you to create and manage Ethereum addresses.</p>
     <h4 class="bold" id="creating-an-ethereum-wallet">Creating an Ethereum wallet</h4>
     <div class="row separator">
       <div class="col-sm-4">
@@ -192,18 +186,14 @@
 <section id="about-the-crowdsale-contract" class="section">
   <div class="container-md">
     <h2 class="bold">About the <em>SuperCrowdsale</em> smart contract</h2>
-    <h5>The Ethereum address that you will input in the recipient address is not the <a href="#" target="_blank">wallet.superander.eth</a> address. This other address is special because you will <strong>send the ETH funds to a smart contract, not to another wallet.</strong></h5>
+    <h5>The Ethereum address that you will input in the recipient address is not the <a href="{{ ens.wallet.url }}" target="_blank">wallet.superander.eth</a> address. This other address is special because you will <strong>send the ETH funds to a smart contract, not to another wallet.</strong></h5>
     <p>This smart contract is a custom crowdsale contract called SuperCrowdsale, <a href="https://github.com/netpoe/SANDER1/blob/master/contracts/SuperCrowdsale.sol" target="_blank">(you can check the code here)</a>. This smart contract is specifically designed to send <span class="alt-bold">SANDER1</span> tokens in exchange of ETH.</p>
-    <p>When the SuperCrowdsale contract receives an ETH transaction with a value greater than 0, it will calculate the amount of tokens that correspond to the value of ETH sent and it will transfer you the tokens and transfer the ETH to the <a href="#" target="_blank">wallet.superander.eth</a> address. After this, you should see your <span class="alt-bold">SANDER1</span> tokens listed in your wallet.</p>
+    <p>When the SuperCrowdsale contract receives an ETH transaction with a value greater than 0, it will calculate the amount of tokens that correspond to the value of ETH sent and it will transfer you the tokens and transfer the ETH to the <a href="{{ ens.wallet.url }}" target="_blank">wallet.superander.eth</a> address. After this, you should see your <span class="alt-bold">SANDER1</span> tokens listed in your wallet.</p>
     <p>The SuperCrowdsale contract is a capped crowdsale contract, meaning that once it reaches its ETH cap ({{ config.crowdsale.cap }} ETH), it will block future transactions.</p>
     <h3 class="bold">Before sending ETH to the SuperCrowdsale contract, please verify that the addresses match:</h3>
-    <div class="ens-addresses">
-      <div>
-        <h4><label>Wallet: </label><a target="_blank" href="#">{{ ens.wallet.name }}</a></h4>
-        <h4><label>Token: </label><a target="_blank" href="#">{{ ens.sander1.name }}</a></h4>
-        <h4><label>Crowdsale: </label><a target="_blank" href="#">{{ ens.crowdsale.name }}</a></h4>
-      </div>
-    </div>
+
+    <app-ens-addresses></app-ens-addresses>
+
   </div>
 </section>
 

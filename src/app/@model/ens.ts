@@ -8,6 +8,7 @@ export class ENS {
   wallet = {
     name: 'wallet.superander.eth',
     address: '0x24b2e8C86Cc5a378b184b64728dB1A8484D844eC',
+    url: 'https://etherscan.io/address/wallet.superander.eth',
   }
 
   sander1 = {

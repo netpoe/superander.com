@@ -32,25 +32,18 @@
   .info-block {
     background-color: $yellow;
     padding: get-spacer(3);
+    min-height: 141px;
     p, h4 {
       margin-bottom: get-spacer(3);
       &:last-child {
         margin: 0;
       }
     }
-    h4, label {
-      @include bold;
-    }
     &.outline {
+      @include flex-column-center;
       background-color: transparent;
       border: 2px solid $yellow;
       color: white;
-    }
-    label {
-      text-transform: uppercase;
-      line-height: 12px;
-      display: block;
-      margin: 0;
     }
   }
 
