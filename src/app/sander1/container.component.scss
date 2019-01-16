@@ -13,6 +13,9 @@
   .title {
     margin-bottom: get-spacer(5);
     color: white;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: get-spacer(3);
+    }
     small {
       color: rgba(white, 0.7);
     }
@@ -21,6 +24,9 @@
   .video-wrapper {
     margin-bottom: get-spacer(3);
     background-color: black;
+    @include media-breakpoint-down(sm) {
+      height: 420px;
+    }
   }
 
   .video-wrapper,
@@ -64,10 +70,7 @@
   .created-with {
     padding: get-spacer(2) 0;
     color: white;
-    @include media-breakpoint-down(sm) {
-      text-align: right;
-      display: block;
-    }
+    display: block;
   }
 }
 

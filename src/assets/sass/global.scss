@@ -88,6 +88,20 @@ body {
   }
 }
 
+// keep-desktop-padding
+@include media-breakpoint-down(sm) {
+  #intro,
+  #how-to,
+  #details,
+  #roadmap,
+  #facks,
+  #about {
+    &.section {
+      padding-bottom: $footer-height;
+    }
+  }
+}
+
 $rem-percentage: 1.475;
 $rem-percentage-2: 1.375;
 @include media-breakpoint-down(sm) {

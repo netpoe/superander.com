@@ -5,4 +5,10 @@
   .menu-item {
     @include menu-item;
   }
+
+  @include media-breakpoint-down(sm) {
+    .token-distro {
+      display: none;
+    }
+  }
 }

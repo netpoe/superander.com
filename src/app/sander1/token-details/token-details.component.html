@@ -19,7 +19,7 @@
           <h4>The album will have {{ config.song.amount }} songs: <br>{{ supercrowdsale.cap | weiToEther }} ETH</h4>
           <h4>By owning a share of <span class="alt-bold">SANDER1</span> tokens you'll participate in {{ (config.crowdsale.shares * 100) }}% of the album total earnings. Quarterly.</h4>
         </div>
-        <a class="btn btn-yellow btn-lg" [routerLink]="['/SANDER1/details']" fragment="token-distro">See token distribution</a>
+        <a class="btn btn-yellow btn-lg see-token-distro" [routerLink]="['/SANDER1/details']" fragment="token-distro">See token distribution</a>
       </div>
     </div>
   </div>
