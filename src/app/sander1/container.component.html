@@ -8,18 +8,33 @@
     <div class="row">
       <div class="col-sm-9">
         <div class="video-wrapper">
-          <video width="100%" height="auto" controls>
+          <iframe width="100%" height="490" src="https://www.youtube.com/embed/6jif3buvbtw?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!-- <video width="100%" height="auto" controls>
             <source src="assets/video/SuperAnder_low.mp4" type="video/mp4">
             Your browser does not support the video tag.
-          </video>
+          </video> -->
         </div>
         <div class="info-block outline">
-          <h4>Amount raised: {{ supercrowdsale.weiRaised | weiToEther }} ETH</h4>
-          <h4>Total cap: {{ supercrowdsale.cap | weiToEther }} ETH</h4>
+          <div class="row amount-raised">
+            <div class="col-sm-4">
+              <h4>Amount raised:</h4>
+            </div>
+            <div class="col-sm-8">
+              <h4>{{ supercrowdsale.weiRaised | weiToEther }} ETH</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h4>Total cap:</h4>
+            </div>
+            <div class="col-sm-8">
+              <h4>{{ supercrowdsale.cap | weiToEther }} ETH</h4>
+            </div>
+          </div>
         </div>
-        <small class="created-with">ICO powered by <a href="#" target="_blank">simpleico.com</a></small>
+        <small class="created-with">ICO powered by <a href="https://simpleico.com" target="_blank">simpleico.com</a></small>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-3 right">
         <app-crowdsale-qr-code></app-crowdsale-qr-code>
         <div class="info-block">
           <p class="bold">Scan this QR with your wallet and send the amount of ETH you are willing to invest.<br><a [routerLink]="['/SANDER1/details']">See token info</a></p>

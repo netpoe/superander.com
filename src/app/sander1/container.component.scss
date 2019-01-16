@@ -4,6 +4,12 @@
   @include flex-column-center;
   @include main;
 
+  .right {
+    @include media-breakpoint-down(sm) {
+      margin-top: get-spacer(5);
+    }
+  }
+
   .title {
     margin-bottom: get-spacer(5);
     color: white;
@@ -33,6 +39,9 @@
     background-color: $yellow;
     padding: get-spacer(3);
     min-height: 141px;
+    @include media-breakpoint-down(sm) {
+      min-height: auto;
+    }
     p, h4 {
       margin-bottom: get-spacer(3);
       &:last-child {
@@ -44,11 +53,21 @@
       background-color: transparent;
       border: 2px solid $yellow;
       color: white;
+      .amount-raised {
+        @include media-breakpoint-down(sm) {
+          margin-bottom: get-spacer(3);
+        }
+      }
     }
   }
 
   .created-with {
+    padding: get-spacer(2) 0;
     color: white;
+    @include media-breakpoint-down(sm) {
+      text-align: right;
+      display: block;
+    }
   }
 }
 

@@ -24,7 +24,7 @@ export class TokenDetailsComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.supercrowdsale = new SuperCrowdsaleContract(this.walletService.getInstance())
     this.supercrowdsale.connect()
-    this.supercrowdsale.setAddress(SuperCrowdsaleContract.ROPSTEN_ADDRESS)
+    this.supercrowdsale.setAddress(this.ens.crowdsale.address)
 
     this.init()
   }

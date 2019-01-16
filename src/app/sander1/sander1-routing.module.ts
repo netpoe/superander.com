@@ -21,10 +21,10 @@ const routes: Routes = [
     path: 'facks',
     component: FacksComponent
   },
-  {
-    path: 'smart-contract-details',
-    component: SmartContractDetailsComponent
-  },
+  // {
+  //   path: 'smart-contract-details',
+  //   component: SmartContractDetailsComponent
+  // },
   {
     path: 'details',
     component: TokenDetailsComponent

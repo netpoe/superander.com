@@ -4,8 +4,6 @@ const SuperCrowdsaleInterface = require('@abi/supercrowdsale.abi.json')
 
 export class SuperCrowdsaleContract {
 
-  static readonly ROPSTEN_ADDRESS = '0xd507a5ce4133236261d469051a1c606c1698fad1'
-
   web3: any
   instance: any
   address: string

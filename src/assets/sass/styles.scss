@@ -32,6 +32,9 @@ $footer-height: 70px;
   text-decoration: none;
   min-height: 160px;
   color: $black;
+  @include media-breakpoint-down(sm) {
+    min-height: 98px;
+  }
   &:hover {
     background-color: $black;
     color: white;

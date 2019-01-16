@@ -9,6 +9,10 @@
   right: 0;
   left: 0;
 
+  @include media-breakpoint-down(sm) {
+    padding: get-spacer(2) 0;
+  }
+
   .footer-left,
   .footer-right {
     @include flex-column-center;
@@ -33,6 +37,21 @@
       &:hover {
         color: white;
       }
+    }
+    .email {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+
+  .email-mobile {
+    font-size: $font-size-base;
+    color: rgba(white, 0.7);
+    text-decoration: none;
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: block;
     }
   }
 }

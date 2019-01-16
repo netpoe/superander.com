@@ -9,7 +9,7 @@ import { SCUILibModule, Network, Config } from '@decentralizedtechnologies/scui-
 
 import deepmerge from 'deepmerge';
 const config = deepmerge(Config, {
-  network: Network.testnet
+  network: Network.mainnet
 })
 
 @NgModule({

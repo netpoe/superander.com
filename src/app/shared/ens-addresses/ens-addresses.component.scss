@@ -12,4 +12,7 @@
   a {
     @include bold;
   }
+  @include media-breakpoint-down(sm) {
+    justify-content: start;
+  }
 }

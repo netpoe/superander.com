@@ -8,6 +8,9 @@
   padding: get-spacer(2);
   padding-bottom: 0;
   min-height: 40vh;
+  @include media-breakpoint-down(sm) {
+    border: none;
+  }
   img {
     height: auto;
     width: 100%;

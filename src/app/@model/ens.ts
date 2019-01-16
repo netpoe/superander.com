@@ -13,13 +13,15 @@ export class ENS {
 
   sander1 = {
     name: 'sander1.superander.eth',
-    address: '0x123',
+    address: '0xC9a593F0c87ffEAF9046aeFe33A86c64cc98769d',
+    url: 'https://etherscan.io/address/sander1.superander.eth',
   }
 
   crowdsale = {
     name: 'supercrowdsale.superander.eth',
-    address: '0x123',
-    img: 'assets/img/supercrowdsale-qr.png'
+    address: '0x1C8654C680c3F18A3B3A0EE943D40848A9FFFd0D',
+    img: 'assets/img/supercrowdsale-qr.png',
+    url: 'https://etherscan.io/address/supercrowdsale.superander.eth',
   }
 
   constructor() { }
