@@ -11,12 +11,20 @@
   background-color: $yellow;
   text-align: center;
   min-height: 75vh;
+  .display-1 {
+    @include media-breakpoint-down(sm) {
+      font-size: 3rem;
+    }
+  }
 }
 
 #how-to {
   background-color: white;
   .qr-wrapper {
     @include flex-row-center;
+    @include media-breakpoint-down(sm) {
+      margin-top: get-spacer(4);
+    }
     .qr {
       width: 280px;
     }
@@ -28,6 +36,9 @@
   .steps {
     @include list-unstyled;
     list-style: decimal;
+    @include media-breakpoint-down(sm) {
+      list-style: none;
+    }
     li {
       h5 {
         @include bold;
@@ -41,6 +52,9 @@
   min-height: 100vh;
   p {
     font-size: $h5-font-size;
+    @include media-breakpoint-down(sm) {
+      font-size: $font-size-base;
+    }
   }
   .section-header {
     margin-bottom: get-spacer(5);

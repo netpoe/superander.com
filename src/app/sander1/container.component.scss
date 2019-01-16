@@ -51,7 +51,7 @@
     &.outline {
       @include flex-column-center;
       background-color: transparent;
-      border: 2px solid $yellow;
+      border: 2px solid lighten($black, 3%);
       color: white;
       .amount-raised {
         @include media-breakpoint-down(sm) {

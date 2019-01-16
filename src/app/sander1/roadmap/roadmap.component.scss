@@ -51,5 +51,32 @@
         left: -140px;
       }
     }
+    @include media-breakpoint-down(sm) {
+      &:nth-child(odd),
+      &:nth-child(even) {
+        article {
+          @include flex-row;
+          text-align: left;
+          width: 100%;
+          padding: 0;
+          .description {
+            padding-left: get-spacer(2);
+            min-height: auto;
+            width: 70%;
+          }
+          h4 {
+            font-size: $h5-font-size;
+          }
+        }
+        .date {
+          text-align: right;
+          position: initial;
+          min-width: auto;
+          padding-top: 0;
+          border: none;
+          width: 30%;
+        }
+      }
+    }
   }
 }
