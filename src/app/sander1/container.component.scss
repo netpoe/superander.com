@@ -24,9 +24,9 @@
   .video-wrapper {
     margin-bottom: get-spacer(3);
     background-color: black;
-    @include media-breakpoint-down(sm) {
-      height: 420px;
-    }
+    // @include media-breakpoint-down(sm) {
+    //   height: 420px;
+    // }
   }
 
   .video-wrapper,
@@ -71,6 +71,9 @@
     padding: get-spacer(2) 0;
     color: white;
     display: block;
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
   }
 }
 

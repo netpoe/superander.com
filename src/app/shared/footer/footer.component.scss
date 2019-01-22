@@ -11,6 +11,7 @@
 
   @include media-breakpoint-down(sm) {
     padding: get-spacer(2) 0;
+    position: relative;
   }
 
   .footer-left,
